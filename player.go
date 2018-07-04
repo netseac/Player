@@ -63,7 +63,7 @@ func setData(root string) ([]File, error) {
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
 		//fmt.Printf("Current path %v", path)
 		if path == root {
-			fmt.Printf("Path %v is root path", path)
+			//fmt.Printf("Path %v is root path", path)
 			return nil
 		}
 		if info.IsDir() {
