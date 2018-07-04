@@ -1,5 +1,6 @@
 # player
-Simple command-line golang mp3 player
+Simple command-line golang mp3 player 
+
 Example usage
 
 ### Step 1
