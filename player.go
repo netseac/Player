@@ -39,7 +39,7 @@ func Run() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Path %v", path)
+	//fmt.Printf("Path %v", path)
 
 	_, err := setData(path)
 	if err != nil {
@@ -58,10 +58,10 @@ func Run() {
 
 func setData(root string) ([]File, error) {
 	var f []File
-	fmt.Printf("Current root %v", root)
+	//fmt.Printf("Current root %v", root)
 
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-		fmt.Printf("Current path %v", path)
+		//fmt.Printf("Current path %v", path)
 		if path == root {
 			fmt.Printf("Path %v is root path", path)
 			return nil
@@ -75,7 +75,7 @@ func setData(root string) ([]File, error) {
 		}
 		metadata, err := getMetadata(path)
 		if err != nil {
-			fmt.Printf("Couldn't get metadata for %v", path)
+			//fmt.Printf("Couldn't get metadata for %v", path)
 			return nil
 		}
 		f = append(f, File{
@@ -88,7 +88,7 @@ func setData(root string) ([]File, error) {
 		return nil, err
 	}
 
-	fmt.Println(f)
+	//fmt.Println(f)
 	data, err := json.Marshal(f)
 	ioutil.WriteFile("data", data, 0666)
 	if err != nil {
