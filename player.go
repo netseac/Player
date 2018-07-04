@@ -29,7 +29,7 @@ type File struct {
 	Path string
 }
 
-func main() {
+func run() {
 	var path string
 	flag.StringVar(&path, "path", "", "set path for playing")
 	flag.Parse()
