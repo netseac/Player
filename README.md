@@ -15,7 +15,9 @@ go run main.go -path=YOUR MP3 MUSIC FOLDER PATH
 
 ### No more steps, Enjoy!
 
-### Thanks guys for
+### Credits
 github.com/dhowden/tag
+
 github.com/hajimehoshi/go-mp3
+
 github.com/hajimehoshi/oto
