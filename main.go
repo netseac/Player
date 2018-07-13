@@ -1,4 +1,4 @@
-package player
+package main
 
 import (
 	"flag"
@@ -22,7 +22,7 @@ type File struct {
 	Path string
 }
 
-func Run() {
+func main() {
 	var path string
 	flag.StringVar(&path, "path", "", "set path for playing")
 	flag.Parse()
