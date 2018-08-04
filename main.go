@@ -75,9 +75,6 @@ func getPlaylist(root string) ([]File, error) {
 		if path == root {
 			return nil
 		}
-		if info.IsDir() {
-			return nil
-		}
 		if filepath.Ext(path) != ".mp3" {
 			return nil
 		}
