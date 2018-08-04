@@ -32,7 +32,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	p, err := getPlaylist(path)
+	p, err := createPlaylist(path)
 	if err != nil {
 		panic(err)
 	}
@@ -68,7 +68,7 @@ func play(path string) error {
 	return nil
 }
 
-func getPlaylist(root string) ([]File, error) {
+func createPlaylist(root string) ([]File, error) {
 	var f []File
 
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
